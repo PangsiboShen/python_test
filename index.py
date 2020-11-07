@@ -11,4 +11,8 @@ knee.to_csv(out_csv)
 
 col_1 = knee['Below Average'].values
 plt.plot(col_1)
+plt.ylabel("days")
+plt.xlabel('counts')
+plt.title('Distribution of Days needed to recover')
 plt.show()
+plt.savefig('knee.jpg')

@@ -8,11 +8,11 @@ print(knee.iloc[0: , :])
 
 out_csv = 'new_knee'
 knee.to_csv(out_csv)
+knee_df = pd.DataFrame(knee)
 
-col_1 = knee['Below Average'].values
-plt.plot(col_1)
+knee_df.plot(subplots = True)
 plt.ylabel("days")
 plt.xlabel('counts')
 plt.title('Distribution of Days needed to recover')
 plt.show()
-plt.savefig('knee.jpg')
+plt.savefig('knee.pdf')
